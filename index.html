@@ -1,11 +1,194 @@
-<html>
-    <head>
-        <title>
-            Mi primer pagina en GIT HUB :)
-        </title>
-    </head>
-    <body>
-        <h1>Bienvenido a mi sitio de ropica brother</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VV Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
 
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-weight: 700;
+      color: #111;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f45d48;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1556909190-447fc5f2c5f6?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .section {
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #111;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-card .info {
+      padding: 15px;
+    }
+
+    .product-card .info h4 {
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+    }
+
+    .product-card .info p {
+      color: #f45d48;
+      font-weight: 500;
+    }
+
+    .about, .contact {
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>VV Clothing</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Moda con actitud.<br>Descubrí tu estilo con VV.</h2>
+  </section>
+
+  <section class="section" id="productos">
+    <h3>Productos Destacados</h3>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1593032457869-3c0f20f5b41b?auto=format&fit=crop&w=800&q=80" alt="Producto 1">
+        <div class="info">
+          <h4>Top de Lino</h4>
+          <p>$8.990</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1622519407565-e3e19f6e6d80?auto=format&fit=crop&w=800&q=80" alt="Producto 2">
+        <div class="info">
+          <h4>Blazer Oversize</h4>
+          <p>$15.500</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1520975682031-1e98c1e3393b?auto=format&fit=crop&w=800&q=80" alt="Producto 3">
+        <div class="info">
+          <h4>Jean Mom Fit</h4>
+          <p>$12.300</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="nosotros">
+    <h3>Sobre VV Clothing</h3>
+    <p>Somos una marca argentina independiente que apuesta a la moda consciente, minimalista y con identidad. Cada prenda está pensada para que te sientas vos misma.</p>
+  </section>
+
+  <section class="section contact" id="contacto">
+    <h3>Contacto</h3>
+    <p>¿Tenés dudas? Escribinos a <a href="mailto:contacto@vvclothing.com">contacto@vvclothing.com</a> o seguinos en Instagram <strong>@vv.clothing</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 VV Clothing - Todos los derechos reservados</p>
+  </footer>
+
+</body>
 </html>
